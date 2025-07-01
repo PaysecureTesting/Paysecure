@@ -11,10 +11,13 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.slf4j.helpers.Reporter;
-import org.testng.Assert;
-import org.testng.annotations.Test;
-import org.testng.internal.ReporterConfig;
+
+import paySecure.utils.utility;
+
+
+
+
+
 
 public class payout_dashBoard {
 
@@ -76,6 +79,10 @@ public class payout_dashBoard {
 	private WebElement yearlyCount;
 	
 	
+	//variable directory
+	final String merhant="Merchant002";
+	final String currency="BTC";
+	
 	public payout_dashBoard(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
@@ -99,12 +106,12 @@ public class payout_dashBoard {
 		WebDriverWait w = new WebDriverWait(driver, Duration.ofSeconds(30));
 		Thread.sleep(2000);
 		w.until(ExpectedConditions.elementToBeClickable(allMerchants)).click();
-		org.testng.Reporter.log("click on all merchants", true);
-
+	//	org.testng.Reporter.log("click on all merchants", true);
+		//org.testng.Reporter.log("click on the all merchants", true);
 		Thread.sleep(2000);
 		w.until(ExpectedConditions.elementToBeClickable(searchAllMerchants)).sendKeys("002");
 		;
-		org.testng.Reporter.log("search merchants from all merchants", true);
+	//	org.testng.Reporter.log("search merchants from all merchants", true);
 
 		List<WebElement> suggestions = w.until(ExpectedConditions
 				.visibilityOfAllElementsLocatedBy(By.xpath("//ul[@id='select2-merchantList-results']/li")));
@@ -115,14 +122,14 @@ public class payout_dashBoard {
 		} else {
 
 			for (WebElement s : suggestions) {
-				if ("Merchant002".equalsIgnoreCase(s.getText().trim())) {
+				if (merhant.equalsIgnoreCase(s.getText().trim())) {
 					s.click();
 					break;
 				}
 			}
 		}
 
-		org.testng.Reporter.log("click on the all merchants", true);
+	
 
 	}
 
@@ -130,13 +137,13 @@ public class payout_dashBoard {
 		WebDriverWait w = new WebDriverWait(driver, Duration.ofSeconds(30));
 		Thread.sleep(2000);
 		w.until(ExpectedConditions.elementToBeClickable(totalUSD)).click();
-		org.testng.Reporter.log("click on total USD", true);
+		//org.testng.Reporter.log("click on total USD", true);
 
 		Thread.sleep(2000);
-		w.until(ExpectedConditions.elementToBeClickable(searchAllCurrencies)).sendKeys("Total in USD");
+		w.until(ExpectedConditions.elementToBeClickable(searchAllCurrencies)).sendKeys(currency);
 		;
-		org.testng.Reporter.log("search merchants from all merchants", true);
-
+		//Reporter.log("search merchants from all merchants", true);
+       
 		List<WebElement> suggestions = w.until(ExpectedConditions
 				.visibilityOfAllElementsLocatedBy(By.xpath("//ul[@id='select2-merCurr-results']/li")));
 
@@ -146,24 +153,26 @@ public class payout_dashBoard {
 		} else {
 
 			for (WebElement s : suggestions) {
-				if ("Total in USD".equalsIgnoreCase(s.getText().trim())) {
+				if (currency.equalsIgnoreCase(s.getText().trim())) {
 					s.click();
 					break;
 				}
 			}
 		}
 
-		org.testng.Reporter.log("click on the all merchants", true);
+	//	org.testng.Reporter.log("click on the all merchants", true);
 
 	}
 
 	public void selectDashboardTodayAndYesterday(String Today, String Count) throws InterruptedException {
 
-		Select s = new Select(today);
-
-		s.selectByVisibleText(Today);
-
-		org.testng.Reporter.log("click on Today filter", true);
+//		Select s = new Select(today);
+//
+//		s.selectByVisibleText(Today);
+		
+	
+    utility.selectByVisibleText(today, Today);
+	//	org.testng.Reporter.log("click on Today filter", true);
 
 		Select t = new Select(todayCount);
 		
@@ -171,7 +180,7 @@ public class payout_dashBoard {
 
 		t.selectByVisibleText(Count);
 
-		org.testng.Reporter.log("click on Today count", true);
+	//	org.testng.Reporter.log("click on Today count", true);
 
 	}
 
@@ -180,6 +189,8 @@ public class payout_dashBoard {
 		Select s = new Select(weeklyCount);
 
 		s.selectByVisibleText(Weekly);
+		
+		
 
 	}
 
@@ -188,7 +199,7 @@ public class payout_dashBoard {
 		WebDriverWait w = new WebDriverWait(driver, Duration.ofSeconds(30));
 		Thread.sleep(1000);
 		w.until(ExpectedConditions.elementToBeClickable(monthly)).click();
-		org.testng.Reporter.log("click on Monthly", true);
+	//	org.testng.Reporter.log("click on Monthly", true);
 
 		List<WebElement> suggestions = w
 				.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath("(//td[@colspan='7'])[1]/span")));
@@ -213,6 +224,8 @@ public class payout_dashBoard {
 		Select s = new Select(monthlyCount);
 
 		s.selectByVisibleText(monthly);
+		
+	
 
 	}
 	
@@ -221,6 +234,8 @@ public class payout_dashBoard {
 		Select s = new Select(yearly);
 
 		s.selectByVisibleText(year);
+		
+		
 
 	}
 	
@@ -229,6 +244,8 @@ public class payout_dashBoard {
 		Select s = new Select(yearlyCount);
 
 		s.selectByVisibleText(yearCount);
+		
+		
 
 	}
 

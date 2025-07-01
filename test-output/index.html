@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\LENOVO\AppData\Local\Temp\testng-eclipse-1523748266\testng-customsuite.xml</span>
+                    <span>C:\Users\LENOVO\AppData\Local\Temp\testng-eclipse-168789794\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -103,7 +103,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.paySecure.testngClass.payoutDashboard" class="method navigator-link" hash-for-method="verifyUserIsOnPayoutDashBoard">verifyUserIsOnPayoutDashBoard</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.paySecure.testngClass.report" class="method navigator-link" hash-for-method="allActionOnTransactionPage">allActionOnTransactionPage</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -121,14 +121,14 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.paySecure.testngClass.payoutDashboard</span>
+              <span class="class-name">com.paySecure.testngClass.report</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyUserIsOnPayoutDashBoard">
-                  </a> <!-- verifyUserIsOnPayoutDashBoard -->
-                  <span class="method-name">verifyUserIsOnPayoutDashBoard</span>
+                  <a name="allActionOnTransactionPage">
+                  </a> <!-- allActionOnTransactionPage -->
+                  <span class="method-name">allActionOnTransactionPage</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -136,7 +136,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\LENOVO\AppData\Local\Temp\testng-eclipse-1523748266\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\LENOVO\AppData\Local\Temp\testng-eclipse-168789794\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -145,7 +145,11 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.paySecure.testngClass.payoutDashboard&quot;/&gt;
+      &lt;class name=&quot;com.paySecure.testngClass.report&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;allActionOnTransactionPage&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.paySecure.testngClass.report --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -187,14 +191,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyUserIsOnPayoutDashBoard')
-data.setCell(0, 2, 'com.paySecure.testngClass.payoutDashboard')
-data.setCell(0, 3, 21295);
+data.setCell(0, 1, 'allActionOnTransactionPage')
+data.setCell(0, 2, 'com.paySecure.testngClass.report')
+data.setCell(0, 3, 24531);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 21 seconds</span>
+              <span class="suite-total-time">Total running time: 24 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -206,26 +210,65 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
-              <span class="reporter-method-name">verifyUserIsOnPayoutDashBoard</span>
+              <span class="reporter-method-name">allActionOnTransactionPage</span>
               <div class="reporter-method-output-div">
-                <span class="reporter-method-output">click on all merchants</span>
-                <span class="reporter-method-output">search merchants from all merchants</span>
-                <span class="reporter-method-output">click on the all merchants</span>
-                <span class="reporter-method-output">click on total USD</span>
-                <span class="reporter-method-output">search merchants from all merchants</span>
-                <span class="reporter-method-output">click on the all merchants</span>
-                <span class="reporter-method-output">click on Today filter</span>
-                <span class="reporter-method-output">click on Today count</span>
-                <span class="reporter-method-output">click on Monthly</span>
+                <span class="reporter-method-output">Click on the Last Action Button in transaction Table</span>
+                <span class="reporter-method-output">Verified transaction id test is present on Last action</span>
+                <span class="reporter-method-output">Click on the Cancel  Button</span>
+                <span class="reporter-method-output">Click on the History Button in transaction Table</span>
+                <span class="reporter-method-output">Click on the Cancel  Button</span>
+                <span class="reporter-method-output">Click on the Remarks Button in transaction Table</span>
+                <span class="reporter-method-output">Veirifies Transaction ID on Remarks page is disabled</span>
+                <span class="reporter-method-output">Click on the Cancel  Button</span>
+                <span class="reporter-method-output">Click on the Remarks Button in transaction Table</span>
+                <span class="reporter-method-output">Click on the send message Button</span>
+                <span class="reporter-method-output">Verify error message </span>
+                <span class="reporter-method-output">Click on the OK  Button</span>
+                <span class="reporter-method-output">Click on the Remarks Button in transaction Table</span>
+                <span class="reporter-method-output">Click on the Cancel  Button</span>
+                <span class="reporter-method-output">Click on the Remarks Button in transaction Table</span>
+                <span class="reporter-method-output">when user click on Remarks then at initial stage select user type field is disabled</span>
+                <span class="reporter-method-output">User select values from user type dropdown</span>
+                <span class="reporter-method-output">After selecting user type values then Select user type field is enabled</span>
+                <span class="reporter-method-output">User select a error</span>
+                <span class="reporter-method-output">User enter Error message is Message Field</span>
+                <span class="reporter-method-output">User click on send message button</span>
+                <span class="reporter-method-output">Message sent successfully is verified</span>
+                <span class="reporter-method-output">Click on OK button on success message</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">10 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.paySecure.testngClass.report</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">selectCurrency</span>
+                <br/>
+                <span class="ignored-method-name">transactionUsingSelectMerchant</span>
+                <br/>
+                <span class="ignored-method-name">transactionUsingSelectBank</span>
+                <br/>
+                <span class="ignored-method-name">selectDateRangeToAndFrom</span>
+                <br/>
+                <span class="ignored-method-name">transactionUsingSelectStatus</span>
+                <br/>
+                <span class="ignored-method-name">status</span>
+                <br/>
+                <span class="ignored-method-name">selectMIDBasedOnBank</span>
+                <br/>
+                <span class="ignored-method-name">selectTimeZoneAndVerify</span>
+                <br/>
+                <span class="ignored-method-name">remarks</span>
+                <br/>
+                <span class="ignored-method-name">selectDate</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Default_suite" class="panel">
@@ -234,18 +277,18 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.paySecure.testngClass.payoutDashboard</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.paySecure.testngClass.report</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">verifyUserIsOnPayoutDashBoard</span>
-                <span class="method-start">15279 ms</span>
+                <span class="method-name">allActionOnTransactionPage</span>
+                <span class="method-start">15941 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">failurMethod([TestResult name=verifyUserIsOnPayoutDashBoard status=SUCCESS method=payoutDashboard.verifyUserIsOnP...)</span>
-                <span class="method-start">36579 ms</span>
+                <span class="method-name">failurMethod([TestResult name=allActionOnTransactionPage status=SUCCESS method=report.allActionOnTransactionPage(...)</span>
+                <span class="method-start">40481 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

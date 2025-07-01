@@ -10,6 +10,7 @@ import java.util.Properties;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
 public class utility {
 
@@ -33,5 +34,18 @@ public class utility {
 	        JavascriptExecutor js = (JavascriptExecutor) driver;
 	        js.executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", element);
 	    }
+	 
+	 
+	 
+	   public static void selectByVisibleText(WebElement element, String visibleText) {
+	        Select select = new Select(element);
+	        select.selectByVisibleText(visibleText);
+	    }
+	   
+	    public static void clickElementByJS(WebDriver driver, WebElement element) {
+	        JavascriptExecutor js = (JavascriptExecutor) driver;
+	        js.executeScript("arguments[0].click();", element);
+	    }
+	
 
 }

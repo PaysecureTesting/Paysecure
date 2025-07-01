@@ -12,6 +12,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 
@@ -26,6 +27,9 @@ public class baseClass {
 	public void launchTheBrowser() throws FileNotFoundException, IOException {
 
 		WebDriverManager.chromedriver().setup();
+		
+		ChromeOptions c=new ChromeOptions();
+		c.addArguments("--headless");
 
 		driver = new ChromeDriver();
 
