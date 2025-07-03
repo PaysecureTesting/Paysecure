@@ -12,35 +12,31 @@ import java.io.IOException;
 
 import org.testng.annotations.BeforeMethod;
 
-public class Bank_Transaction_Time_Report extends baseClass{
+public class Bank_Transaction_Time_Report extends baseClass {
 	loginPage lp;
 	bank_Transaction_Time_Report bt;
 	transaction ts;
-	
-	
+
 	@BeforeMethod
-	  public void beforeMethod() throws IOException, Exception {
+	public void beforeMethod() throws IOException, Exception {
 		launchTheBrowser();
-		
-		bt=new bank_Transaction_Time_Report(driver);
+
+		bt = new bank_Transaction_Time_Report(driver);
 		lp = new loginPage(driver);
 		lp.loginUsingValidCredentials(driver);
-		ts=new transaction(driver);
-		
-	  }	
-	
-	
-	
+		ts = new transaction(driver);
+
+	}
+
 	@Test
-  public void verifyUserisOnBankTransactionTimeReportpage() throws InterruptedException {
-	  bt.navigateUptoBankTransactionTimeReport(driver);
-	  bt.convertDateFormat();
-      bt.selectDate(driver);
-      bt.applyButton(driver);
-    ts.selectDashboardusinAllBank(driver);
-	  bt.enterTimeIn_Transaction_Time_more_than(driver,"0");
-	  bt.searchButton(driver);
-  }
-  
+	public void verifyUserisOnBankTransactionTimeReportpage() throws InterruptedException {
+		bt.navigateUptoBankTransactionTimeReport(driver);
+		bt.convertDateFormat();
+		bt.selectDate(driver);
+		bt.applyButton(driver);
+		ts.selectDashboardusinAllBank(driver);
+		bt.enterTimeIn_Transaction_Time_more_than(driver, "0");
+		bt.searchButton(driver);
+	}
 
 }
