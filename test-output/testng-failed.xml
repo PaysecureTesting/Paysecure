@@ -5,7 +5,7 @@
     <classes>
       <class name="com.paySecure.report.testngClass.transaction">
         <methods>
-          <include name="transactionUsingSelectMerchant"/>
+          <include name="validatetransactiondataWithCSV"/>
           <include name="setUp"/>
           <include name="failurMethod"/>
         </methods>

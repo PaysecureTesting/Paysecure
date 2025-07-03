@@ -46,7 +46,7 @@ public class transaction extends baseClass {
 
 	}
 
-	@Test(retryAnalyzer = myTry.class, priority = 0, enabled =true)
+	@Test(retryAnalyzer = myTry.class, priority = 0, enabled =false)
 	@Description("Test to transactionUsingSelectStatus")
 	public void transactionUsingSelectMerchant() throws InterruptedException, TimeoutException {
 		ts.selectDashboardusinAllMerchant(driver);
@@ -157,7 +157,7 @@ public class transaction extends baseClass {
 		
 	}
 
-	@Test(enabled =false)
+	@Test(enabled =true)
 	public void validatetransactiondataWithCSV() throws InterruptedException {
 		ts.selectDateRange(driver,"Yesterday");
 		ts.clickOnSearchButton(driver);

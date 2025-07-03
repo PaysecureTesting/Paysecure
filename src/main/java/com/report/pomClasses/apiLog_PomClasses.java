@@ -78,10 +78,12 @@ public class apiLog_PomClasses {
 
 	}
 	
-	public void click_SearchButton(WebDriver driver) {
+	
+	public  void click_SearchButton(WebDriver driver) {
 		WebDriverWait w = new WebDriverWait(driver, Duration.ofSeconds(30));
 		w.until(ExpectedConditions.elementToBeClickable(searchButton)).click();
 		Reporter.log("Click on Search Button", true);
+		
 	}
 	
 	

@@ -718,9 +718,9 @@ public class transaction_pomClasses {
 	            System.out.println(expectedAmount);
 	            
 	            // Assertions
-	      //      Assert.assertEquals(uiTxnId, expectedTxnId, "Mismatch in Transaction ID at row: " );
-	       //     Assert.assertEquals(uiAmount, expectedAmount, "Mismatch in Amount at row: ");
-	        //    Assert.assertEquals(uiStatus.toUpperCase(), expectedStatus.toUpperCase(), "Mismatch in Status at row: " + (i + 2));
+	            Assert.assertEquals(uiTxnId, expectedTxnId, "Mismatch in Transaction ID at row: " );
+	            Assert.assertEquals(uiAmount, expectedAmount, "Mismatch in Amount at row: ");
+	            Assert.assertEquals(uiStatus.toUpperCase(), expectedStatus.toUpperCase(), "Mismatch in Status at row: " + (i + 2));
 	        }
 		
 		
