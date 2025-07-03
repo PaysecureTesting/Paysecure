@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.paySecure.testngClass.report">
+      <class name="com.paySecure.report.testngClass.Bank_Transaction_Time_Report">
         <methods>
-          <include name="allActionOnTransactionPage"/>
-          <include name="setUp"/>
+          <include name="beforeMethod"/>
+          <include name="verifyUserisOnBankTransactionTimeReportpage"/>
           <include name="failurMethod"/>
         </methods>
-      </class> <!-- com.paySecure.testngClass.report -->
+      </class> <!-- com.paySecure.report.testngClass.Bank_Transaction_Time_Report -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
